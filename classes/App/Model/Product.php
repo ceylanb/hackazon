@@ -230,7 +230,7 @@ class Product extends BaseModel {
             $productIds = ',';
         }
         if (strpos($productIds, ",$productId,") === false) {
-            $this->pixie->cookie->set('visited_products', $productIds . $productId . ',', 3600 * 24 * 365, '/');
+            $this->pixie->cookie->set('visited_products', ',' . $productId . ',', 3600 * 24 * 365, '/');
         }
     }
 
